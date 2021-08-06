@@ -1,75 +1,107 @@
 import styled from 'styled-components'
 
+
 export const HeaderContainer = styled.header`
-height: 500px;
+background: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 0 30px;
+height: 700px;
+position: relative;
+z-index: 1;
 `
+
+export const HeaderBg = styled.div`
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+`
+
+export const VideoBg = styled.video`
+width: 100%;
+height: 100%;
+-o-object-fit: cover;
+object-fit: cover;
+background: #fff;
+`
+
 export const TitleWrapper = styled.div`
-margin-left: 200px;
-margin-top: 150px;
-
+z-index: 3;
+max-width: 1200px;
+position: absolute;
+padding: 8px 24px;
+display: flex;
+flex-direction: column;
 h1 {
-  font-size: 80px;
-  font-weight: 100;
-  margin: 0;
+font-size: 80px;
+text-align: center;
+font-weight: 200;
+text-transform: uppercase;
 }
-h2 {
+
+div > * {
+    visibility: hidden;
+    position: absolute;
+    align-items: center;
+    animation: 20s autoplay1 infinite;
+  }
+  @keyframes autoplay1 {
+    0% {
+      visibility: visible;
+      opacity: 0%;
+    }
+    10% {
+      visibility: visible;
+      opacity: 45%;
+    }
+    25% {
+      visibility: visible;
+      opacity: 100%;
+    }
+    35% {
+      visibility: hidden;
+      opacity: 0%;
+    }
+  }
+  
+  div > *:nth-child(1) {animation-delay: 0s}
+  div > *:nth-child(2) {animation-delay: 6s}
+  div > *:nth-child(3) {animation-delay: 12s}
+
+@media screen and (max-width: 800px) {
+h1 {
   font-size: 40px;
-  font-weight: 800;
-  margin: 0;
 }
+}
+@media screen and (max-width: 480px) {
+h1 {
+  font-size: 30px;
+}
+}
+`
 
-@media screen and (max-width: 930px) {
-margin-left: 100px;
-margin-top: 100px;
-  h1 {
-    font-size: 40px;
+export const HeaderInfo = styled.div`
+display: flex;
+justify-content: center;
+h3 {
+  font-weight: 200;
+  font-size: 40px;
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  h3 {
+    font-size: 33px;
+  } 
+}
+@media screen and (max-width: 480px) {
+  h3 {
+    font-size: 20px;
   }
-  h2 {
-    font-size: 25px;
-  }
-}
-`
-
-export const HeaderImg = styled.img`
-width: 350px;
-position: absolute;
-right: 100px;
-top: 220px;
-
-@media screen and (max-width: 930px) {
-width: 200px;
-
-}
-`
-export const BarWrapper = styled.div`
-position: absolute;
-top: 650px;
-right: 20px;
-@media screen and (max-width: 930px) {
-  top: 480px;
-}
-`
-
-export const TopBar = styled.div`
-background: #276DAD;
-height: 32px;
-width: 800px;
-transform: rotate(-4deg);
-margin: 5px;
-@media screen and (max-width: 930px) {
-  width: 400px;
-  height: 27px;
-}
-`
-
-export const BottomBar = styled.div`
-background: #54C6CD;
-height: 20px;
-width: 850px;
-transform: rotate(-4deg);
-margin: 5px;
-@media screen and (max-width: 930px) {
-  width: 450px;
-  height: 20px;
 }
 `

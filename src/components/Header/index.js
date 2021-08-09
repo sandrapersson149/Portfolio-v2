@@ -13,7 +13,7 @@ const Header = () => {
         <HeaderInfo>
           <h3>Aspiring Front end developer</h3>
           <h3>Student at KYH Stockholm</h3>
-          <h3>Love design in any shape or form</h3>
+          <h3>Love design and being creative</h3>
         </HeaderInfo>
       </TitleWrapper>
     </HeaderContainer>

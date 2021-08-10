@@ -7,9 +7,10 @@ display: flex;
 justify-content: center;
 align-items: center;
 padding: 0 30px;
-height: 850px;
+height: 110vh;
 position: relative;
 z-index: 1;
+border: none;
 `
 
 export const HeaderBg = styled.div`
@@ -35,11 +36,12 @@ export const TitleWrapper = styled.div`
 z-index: 3;
 max-width: 1200px;
 position: absolute;
-padding: 8px 24px;
 display: flex;
 flex-direction: column;
+margin-top: -50px;
 h1 {
-font-size: 80px;
+margin: 0;
+font-size: 70px;
 text-align: center;
 font-weight: 200;
 text-transform: uppercase;
@@ -91,12 +93,12 @@ display: flex;
 justify-content: center;
 h3 {
   font-weight: 200;
-  font-size: 40px;
+  font-size: 35px;
   text-align: center;
 }
 @media screen and (max-width: 800px) {
   h3 {
-    font-size: 33px;
+    font-size: 30px;
   } 
 }
 @media screen and (max-width: 480px) {

@@ -9,7 +9,8 @@ background: #252839;
 
 export const FooterInfo = styled.p`
 font-size: 20px;
-padding: 10px;
+font-weight: 200;
+padding: 60px;
 color: #fff;
 text-align: center;
 margin-top: 0;

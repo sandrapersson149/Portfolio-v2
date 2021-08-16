@@ -1,66 +1,58 @@
-import React from 'react'
-import { WorkContainer, TitleWrapper, WorkTitle, WorkInfo, ProjectsContainer, Project, Arrow } from './WorkStyled'
-import Work1 from '../../images/awsomecake2.PNG'
-import { motion } from 'framer-motion'
+import React from 'react';
+import { WorkContainer, TitleWrapper, WorkTitle, WorkInfo, ProjectsContainer, Wrapper, Arrow } from './WorkStyled';
+import { motion } from 'framer-motion';
+import { FiArrowRightCircle } from 'react-icons/fi'
 
+// const projectVariants = {
+//   init: {
 
-function Detail({ title, desc }) {
-  return (
-    <Project className="details">
-      <h3>{title}</h3>
-      <p>{desc}</p>
-      <Arrow />
-    </Project>
-  );
-}
+//   },
+//   animate: {
 
-const hover = {
-  scaleX: 1.5,
-  scaleY: 1.5,
-  filter: "brightness(1)",
-  transition: {
-    duration: 0.3,
-    ease: "linear",
-  },
-};
-
-const zoom = {
-  initial: { filter: "brightness(0.40)" },
-  animate: { transition: { duration: 1.8 } },
-};
-
-
-// använd usestate för att sätte ett state för när man öppnar bilden. 
+//   }
+// }
 
 const Work = () => {
   return (
     <WorkContainer id='work'>
       <TitleWrapper>
         <WorkTitle>Work</WorkTitle>
+        <WorkInfo>
+          <p>Find all my projects at <a href="https://github.com/sandrapersson149?tab=repositories">Github</a></p>
+        </WorkInfo>
       </TitleWrapper>
-      <WorkInfo>Some of the projects I have worked on</WorkInfo>
+
       <ProjectsContainer>
-        <div>
-          <motion.img src={Work1}
-            variants={zoom}
-            initial="initial"
-            animate="animate"
-            whileHover={hover}
-          ></motion.img>
-          <Detail title="AwsomeCake" desc="My first project" />
-        </div>
-        <div>
-          <img src={Work1}></img>
-          <Detail title="AwsomeCake" desc="My first project" />
-        </div>
-        <div>
-          <img src={Work1}></img>
-          <Detail title="AwsomeCake" desc="My first project" />
-        </div>
-        <div>
-          <img src={Work1}></img>
-          <Detail title="AwsomeCake" desc="My first project" />
-        </div>
+        <motion.div
+          whileHover={{ scale: 1.2, color: '#54C6CD' }}>
+          <h2>Team project - SunStats</h2>
+          <Wrapper>
+            <p>A group project from school. We made a travel weather app.</p>
+            <motion.a href="https://github.com/sandrapersson149/fe_20tp_bev_group6"
+              whileHover={{ scale: 1.5, opacity: 0.5 }}>
+              <Arrow /></motion.a>
+          </Wrapper>
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.2, color: '#54C6CD' }}>
+          <h2>React app - BurgerAndBeans</h2>
+          <Wrapper>
+            <p>A side project I made to learn more about React and animations.</p>
+            <motion.a href="https://github.com/sandrapersson149/BurgerAndBeans"
+              whileHover={{ scale: 1.5, opacity: 0.5 }}>
+              <Arrow /></motion.a>
+          </Wrapper>
+        </motion.div>
+        <motion.div
+          whileHover={{ scale: 1.2, color: '#54C6CD' }}>
+          <h2>AwesomeCake - My first project</h2>
+          <Wrapper>
+            <p>This is my first HTML/CSS project from school.</p>
+            <motion.a href="https://github.com/sandrapersson149/awesomecake-ip1"
+              whileHover={{ scale: 1.5, opacity: 0.5 }}>
+              <Arrow /></motion.a>
+          </Wrapper>
+        </motion.div>
 
       </ProjectsContainer>
     </WorkContainer>

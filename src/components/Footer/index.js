@@ -4,7 +4,7 @@ import { FooterContainer, FooterInfo } from './FooterStyled'
 const Footer = () => {
   return (
     <FooterContainer>
-      <FooterInfo>Created by Sandra Persson</FooterInfo>
+      <FooterInfo>Made by me - Sandra Persson</FooterInfo>
     </FooterContainer>
   )
 }

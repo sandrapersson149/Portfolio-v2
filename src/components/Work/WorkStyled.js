@@ -1,14 +1,21 @@
 import styled from 'styled-components'
-import { IoIosArrowForward } from 'react-icons/io'
-import { motion } from 'framer-motion'
+import { BsArrowRight } from 'react-icons/bs'
 
 export const WorkContainer = styled.div`
 height: 100%;
-margin: 200px 50px 50px 50px;
+margin: 200px 100px;
+
+@media screen and (max-width: 500px) {
+margin: 100px 40px;
+}
 `
 
 export const TitleWrapper = styled.div`
-
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+margin: 70px 0;
 `
 
 export const WorkTitle = styled.h2`
@@ -24,34 +31,60 @@ border-bottom: 5px solid #54C6CD;
 `
 
 export const WorkInfo = styled.div`
-
+p {
+font-size: 25px;
+font-weight: 300;
+text-align: center;
+}
+a {
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  color: gray;
+}
 `
 
 export const ProjectsContainer = styled.div`
 display: flex;
-justify-content: center;
-flex-wrap: wrap;
-width: 90%;
+align-items: flex-start;
+flex-direction: column;
+max-width: 800px;
 margin: 0 auto;
 div {
-  width: 500px;
-  margin: 25px;
+  margin: 40px 10px;
+  h2 {
+    font-size: 40px;
+    margin: 0;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
 }
-img{
-  width: 500px;
+
+@media screen and (max-width: 800px) {
+div {
+    h2{
+    font-size: 27px;
+  }
+}
+
 }
 `
-
-export const Project = styled(motion.div)`
-border: 1px solid black;
-display: block;
-
+export const Wrapper = styled.section`
+display: flex;
+  p{
+    margin-top: 10px;
+  }
+  a {
+    /* margin-top: -20px; */
+    margin-left: 40px;
+  }
 `
 
-export const Arrow = styled(IoIosArrowForward)`
-border-radius: 100%;
-background: transparent;
-border: 2px solid black;
-width: 30px;
-height: 30px;
+export const Arrow = styled(BsArrowRight)`
+font-size: 40px;
+height: auto;
+color: black;
 `

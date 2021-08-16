@@ -2,8 +2,7 @@ import styled from 'styled-components'
 import { BsArrowRight } from 'react-icons/bs'
 
 export const WorkContainer = styled.div`
-height: 100%;
-margin: 200px 100px;
+margin: 200px auto 300px auto;
 
 @media screen and (max-width: 500px) {
 margin: 100px 40px;
@@ -20,6 +19,7 @@ margin: 70px 0;
 
 export const WorkTitle = styled.h2`
 margin: 0;
+margin-top: 50px;
 width: 130px;
 text-align: center;
 padding: 0 10px;

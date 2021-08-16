@@ -58,7 +58,7 @@ text-align: center;
 
 export const NavItem = styled.li`
 height: 80px;
-
+font-size: 17px;
 `
 
 export const NavLinks = styled(LinkS)`
@@ -68,11 +68,11 @@ align-items: center;
 text-decoration: none;
 text-transform: uppercase;
 font-weight: 600;
-padding: 0 2rem;
+padding: 0 1rem;
 height: 100%;
 cursor: pointer;
 
 &.active {
-  border-bottom: 3px solid #276DAD;
+  border-bottom: 4px solid #276DAD;
 }
 `

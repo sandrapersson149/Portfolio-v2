@@ -2,17 +2,29 @@ import styled from "styled-components";
 import { RiLinkedinFill, RiGithubLine, RiMailLine } from 'react-icons/ri'
 
 export const ContactContainer = styled.div`
-height: 400px;
-width: 100%;
+height: 600px;
+width: 70%;
+margin: 200px auto;
 background: #D8E5F0;
-padding-top: 40px;
+box-shadow: 8px 8px 4px -5px rgba(0, 0, 0, 0.31);
+`
+
+export const BackgrundContainer = styled.div`
+background: gray;
+height: 620px;
+width: 70%;
+margin-top: -40px;
+left: 10%;
+position: absolute;
+z-index:-1;
+box-shadow: 8px 8px 4px -5px rgba(0, 0, 0, 0.31);
 `
 
 export const ContactTitel = styled.h2`
-margin: 100px auto 20px auto;
+margin: 50px auto 30px auto;
 width: 150px;
 text-align: center;
-padding: 0 10px;
+padding-top: 150px;
 font-size: 30px;
 line-height: 45px;
 text-transform: uppercase;

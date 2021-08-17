@@ -49,7 +49,6 @@ display: flex;
 align-items: center;
 list-style: none;
 text-align: center;
-/* margin-right: -22px; */
 
 @media screen and (max-width: 800px) {
   display: none;
@@ -59,6 +58,7 @@ text-align: center;
 export const NavItem = styled.li`
 height: 80px;
 font-size: 17px;
+margin: 15px;
 `
 
 export const NavLinks = styled(LinkS)`
@@ -71,7 +71,9 @@ font-weight: 600;
 padding: 0 1rem;
 height: 100%;
 cursor: pointer;
-
+:hover {
+  opacity: 0.5;
+}
 &.active {
   border-bottom: 4px solid #276DAD;
 }

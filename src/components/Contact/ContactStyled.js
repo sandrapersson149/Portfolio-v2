@@ -1,30 +1,23 @@
 import styled from "styled-components";
 import { RiLinkedinFill, RiGithubLine, RiMailLine } from 'react-icons/ri'
+import { motion } from 'framer-motion'
 
 export const ContactContainer = styled.div`
-height: 600px;
-width: 70%;
-margin: 200px auto;
+width: 60%;
+margin: 300px auto 200px auto;
 background: #D8E5F0;
 box-shadow: 8px 8px 4px -5px rgba(0, 0, 0, 0.31);
-`
-
-export const BackgrundContainer = styled.div`
-background: gray;
-height: 620px;
-width: 70%;
-margin-top: -40px;
-left: 10%;
-position: absolute;
-z-index:-1;
-box-shadow: 8px 8px 4px -5px rgba(0, 0, 0, 0.31);
+@media screen and (max-width: 900px) {
+  width: 90%;
+  margin: 200px auto;
+}
 `
 
 export const ContactTitel = styled.h2`
-margin: 50px auto 30px auto;
+margin: 50px auto;
 width: 150px;
 text-align: center;
-padding-top: 150px;
+padding-top: 100px;
 font-size: 30px;
 line-height: 45px;
 text-transform: uppercase;
@@ -34,18 +27,30 @@ border-bottom: 5px solid #276DAD;
 
 export const ContactInfo = styled.p`
 font-size: 20px;
-margin: 0 15px;
 text-align: center;
+@media screen and (max-width: 600px) {
+  font-size: 15px;
+  margin: 30px;
+}
 `
 
 export const Wrapper = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-margin: 30px;
+
+@media screen and (max-width: 480px) {
+flex-direction: column;
+padding-bottom: 20px;
+}
 `
-export const IconButton = styled.a`
-margin: 15px;
+
+export const IconButton = styled(motion.a)`
+margin: 30px 15px 50px 15px;
+
+@media screen and (max-width: 480px) {
+  margin: 20px 15px;
+}
 `
 
 export const GithubIcon = styled(RiGithubLine)`
@@ -54,8 +59,8 @@ color: black;
 border: 2px solid black;
 border-radius: 100%;
 padding: 12px;
-width: 30px;
-height: 30px;
+width: 40px;
+height: 40px;
 :hover {
   color: white;
   background: #252839;
@@ -69,8 +74,8 @@ color: black;
 border: 2px solid black;
 border-radius: 100%;
 padding: 12px;
-width: 30px;
-height: 30px;
+width: 40px;
+height: 40px;
 :hover {
   color: white;
   background: #252839;
@@ -84,8 +89,8 @@ color: black;
 border: 2px solid black;
 border-radius: 100%;
 padding: 12px;
-width: 30px;
-height: 30px;
+width: 40px;
+height: 40px;
 :hover {
   color: white;
   background: #252839;

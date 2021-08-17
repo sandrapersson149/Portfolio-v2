@@ -14,7 +14,11 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-margin: 70px 0;
+margin: 20px 0;
+h3 {
+    font-size: 25px;
+    font-weight: 300;
+  }
 `
 
 export const WorkTitle = styled.h2`
@@ -52,6 +56,7 @@ align-items: flex-start;
 flex-direction: column;
 max-width: 800px;
 margin: 0 auto;
+
 div {
   margin: 40px 10px;
   h2 {
@@ -60,6 +65,7 @@ div {
     text-decoration: none;
     font-weight: 700;
   }
+
 
 }
 

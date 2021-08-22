@@ -1,5 +1,11 @@
 import React from 'react'
-import { HeaderContainer, TitleWrapper, HeaderBg, VideoBg, HeaderInfo } from './HeaderStyled'
+import {
+  HeaderContainer,
+  TitleWrapper,
+  HeaderBg,
+  VideoBg,
+  HeaderInfo
+} from './HeaderStyled'
 import Video from '../../video/video.mp4'
 
 const Header = () => {
@@ -11,9 +17,8 @@ const Header = () => {
       <TitleWrapper>
         <h1>Sandra Persson</h1>
         <HeaderInfo>
-          <h3>Aspiring Front end developer</h3>
+          <h3>Front end developer</h3>
           <h3>Student at KYH Stockholm</h3>
-          <h3>Love design and being creative</h3>
         </HeaderInfo>
       </TitleWrapper>
     </HeaderContainer>

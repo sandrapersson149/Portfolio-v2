@@ -7,12 +7,11 @@ width: 60%;
 margin: 300px auto 200px auto;
 background: #D8E5F0;
 box-shadow: 8px 8px 4px -5px rgba(0, 0, 0, 0.31);
-@media screen and (max-width: 900px) {
-  width: 90%;
-  margin: 200px auto;
-}
+  @media screen and (max-width: 900px) {
+    width: 90%;
+    margin: 200px auto;
+  }
 `
-
 export const ContactTitel = styled.h2`
 margin: 50px auto;
 width: 150px;
@@ -24,35 +23,30 @@ text-transform: uppercase;
 color: #252839;
 border-bottom: 5px solid #276DAD;
 `
-
 export const ContactInfo = styled.p`
 font-size: 20px;
 text-align: center;
-@media screen and (max-width: 600px) {
-  font-size: 15px;
-  margin: 30px;
-}
+  @media screen and (max-width: 600px) {
+    font-size: 15px;
+    margin: 30px;
+  }
 `
-
 export const Wrapper = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-
-@media screen and (max-width: 480px) {
-flex-direction: column;
-padding-bottom: 20px;
-}
+  @media screen and (max-width: 480px) {
+  flex-direction: column;
+  padding-bottom: 20px;
+  }
 `
 
 export const IconButton = styled(motion.a)`
 margin: 30px 15px 50px 15px;
-
-@media screen and (max-width: 480px) {
-  margin: 20px 15px;
-}
+  @media screen and (max-width: 480px) {
+    margin: 20px 15px;
+  }
 `
-
 export const GithubIcon = styled(RiGithubLine)`
 text-decoration: none;
 color: black;
@@ -67,7 +61,6 @@ height: 40px;
   border: 2px solid #252839;
 }
 `
-
 export const LinkedInIcon = styled(RiLinkedinFill)`
 text-decoration: none;
 color: black;
@@ -82,7 +75,6 @@ height: 40px;
   border: 2px solid #252839;
 }
 `
-
 export const MailIcon = styled(RiMailLine)`
 text-decoration: none;
 color: black;

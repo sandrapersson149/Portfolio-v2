@@ -1,14 +1,13 @@
 import styled from 'styled-components'
-import { BsArrowRight } from 'react-icons/bs'
 
 export const WorkContainer = styled.div`
 margin: 200px auto 300px auto;
-
-@media screen and (max-width: 500px) {
-margin: 100px 40px;
-}
+overflow: hidden;
+ @media screen and (max-width: 800px) {
+   margin-left: 20px;
+   margin-right: 20px;
+} 
 `
-
 export const TitleWrapper = styled.div`
 display: flex;
 align-items: center;
@@ -20,7 +19,6 @@ h3 {
     font-weight: 300;
   }
 `
-
 export const WorkTitle = styled.h2`
 margin: 0;
 margin-top: 50px;
@@ -33,7 +31,6 @@ text-transform: uppercase;
 color: #252839;
 border-bottom: 5px solid #54C6CD;
 `
-
 export const WorkInfo = styled.div`
 p {
 font-size: 25px;
@@ -56,41 +53,44 @@ align-items: flex-start;
 flex-direction: column;
 max-width: 800px;
 margin: 0 auto;
-
+padding: 20px;
+overflow: hidden;
 div {
-  margin: 40px 10px;
-  h2 {
+  margin: 30px 0;
+  a {
     font-size: 40px;
-    margin: 0;
     text-decoration: none;
+    color: inherit;
     font-weight: 700;
-  }
-
-
-}
-
-@media screen and (max-width: 800px) {
-div {
-    h2{
-    font-size: 27px;
+    margin: 0;
   }
 }
-
+@media screen and (max-width: 700px) {
+    div {
+    a {
+      font-size: 30px;
+    }
+  }
 }
+  @media screen and (max-width: 480px) {
+      div {
+      h2 {
+        font-size: 20px;
+      }
+    }
+  }
 `
 export const Wrapper = styled.section`
 display: flex;
+max-width: 600px;
   p{
-    margin-top: 10px;
+    margin: 5px;
+    max-width: 450px;
   }
-  a {
-    /* margin-top: -20px; */
-    margin-left: 40px;
+  @media screen and (max-width: 700px) {
+    max-width: 300px;
+    p{
+    font-size: 13px;
   }
-`
-
-export const Arrow = styled(BsArrowRight)`
-font-size: 40px;
-height: auto;
-color: black;
+}
 `

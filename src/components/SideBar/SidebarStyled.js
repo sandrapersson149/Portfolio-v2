@@ -19,7 +19,6 @@ top:${({ isOpen }) => (isOpen ? '0' : '-100%')};
 export const CloseIcon = styled(FaTimes)`
 color: #252839;
 `
-
 export const Icon = styled.div`
 position: absolute;
 top: 1.2rem;
@@ -29,22 +28,18 @@ font-size: 2.5rem;
 cursor: pointer;
 outline: none;
 `
-
 export const SidebarWrapper = styled.div`
 color: #54C6CD;
 `
-
 export const SidebarMenu = styled.ul`
 display: grid;
 grid-template-columns: 1fr;
 grid-template-rows: repeat(5, 90px);
 text-align: center;
-
-@media screen and (max-width: 480px) {
-  grid-template-rows: repeat(5,70px);
-}
+  @media screen and (max-width: 480px) {
+    grid-template-rows: repeat(5,70px);
+  }
 `
-
 export const SidebarLink = styled(LinkS)`
 display: flex;
 align-items: center;
@@ -58,7 +53,6 @@ color: #54C6CD;
 text-transform: uppercase;
 cursor: pointer;
 margin-right: 35px;
-
 &:hover {
   color: #54C6CD;
   transition: 0.2s ease-in-out;

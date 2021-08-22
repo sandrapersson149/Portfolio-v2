@@ -1,6 +1,13 @@
 import React from 'react'
 import { FaBars } from 'react-icons/fa'
-import { Nav, NavbarContainer, MobileIcon, NavMenu, NavItem, NavLinks } from './NavbarStyled'
+import {
+  Nav,
+  NavbarContainer,
+  MobileIcon,
+  NavMenu,
+  NavItem,
+  NavLinks
+} from './NavbarStyled'
 
 
 const Navbar = ({ toggle }) => {
@@ -28,6 +35,7 @@ const Navbar = ({ toggle }) => {
             >Contact</NavLinks>
           </NavItem>
         </NavMenu>
+
       </NavbarContainer>
     </Nav>
   )

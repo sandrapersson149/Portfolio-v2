@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-
 export const HeaderContainer = styled.header`
 background: #fff;
 display: flex;
@@ -39,21 +38,21 @@ position: absolute;
 display: flex;
 flex-direction: column;
 margin-top: -50px;
-h1 {
-margin: 0;
-font-size: 70px;
-text-align: center;
-font-weight: 200;
-text-transform: uppercase;
-}
+  h1 {
+  margin: 0;
+  font-size: 70px;
+  text-align: center;
+  font-weight: 200;
+  text-transform: uppercase;
+  }
 
 div > * {
     visibility: hidden;
     position: absolute;
     align-items: center;
-    animation: 20s autoplay1 infinite;
+    animation: 16s autoplay infinite;
   }
-  @keyframes autoplay1 {
+  @keyframes autoplay {
     0% {
       visibility: visible;
       opacity: 0%;
@@ -71,23 +70,20 @@ div > * {
       opacity: 0%;
     }
   }
-  
   div > *:nth-child(1) {animation-delay: 0s}
-  div > *:nth-child(2) {animation-delay: 6s}
-  div > *:nth-child(3) {animation-delay: 12s}
+  div > *:nth-child(2) {animation-delay: 7s}
 
-@media screen and (max-width: 800px) {
-h1 {
-  font-size: 40px;
-}
-}
-@media screen and (max-width: 480px) {
-h1 {
-  font-size: 30px;
-}
-}
+  @media screen and (max-width: 800px) {
+    h1 {
+      font-size: 40px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 30px;
+    }
+  }
 `
-
 export const HeaderInfo = styled.div`
 display: flex;
 justify-content: center;
@@ -96,14 +92,14 @@ h3 {
   font-size: 35px;
   text-align: center;
 }
-@media screen and (max-width: 800px) {
-  h3 {
-    font-size: 30px;
-  } 
-}
-@media screen and (max-width: 480px) {
-  h3 {
-    font-size: 20px;
+  @media screen and (max-width: 800px) {
+    h3 {
+      font-size: 30px;
+    } 
   }
-}
+  @media screen and (max-width: 480px) {
+    h3 {
+      font-size: 20px;
+    }
+  }
 `

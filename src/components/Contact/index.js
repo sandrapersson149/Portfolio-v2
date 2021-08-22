@@ -1,5 +1,14 @@
 import React, { useEffect } from 'react';
-import { ContactContainer, ContactTitel, ContactInfo, Wrapper, IconButton, GithubIcon, LinkedInIcon, MailIcon } from './ContactStyled'
+import {
+  ContactContainer,
+  ContactTitel,
+  ContactInfo,
+  Wrapper,
+  IconButton,
+  GithubIcon,
+  LinkedInIcon,
+  MailIcon
+} from './ContactStyled'
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
 
@@ -26,7 +35,6 @@ const Contact = () => {
       }
     }
   }
-
   const secondVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -37,7 +45,6 @@ const Contact = () => {
       }
     }
   }
-
   const thirdVariants = {
     hidden: { opacity: 0 },
     visible: {

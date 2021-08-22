@@ -1,6 +1,13 @@
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { ProfileContainer, TextWrapper, ProfileH2, ProfileText, ImgWrapper, ProfileImg } from './ProfileStyled';
+import {
+  ProfileContainer,
+  TextWrapper,
+  ProfileH2,
+  ProfileText,
+  ImgWrapper,
+  ProfileImg
+} from './ProfileStyled';
 import ProfilePic from '../../images/ProfileImg.jpg'
 import { useAnimation } from 'framer-motion';
 
@@ -20,8 +27,8 @@ const Profile = () => {
     }
   }, [controls, inView]);
 
-  const leftVariants = {
-    hidden: { opacity: 0, x: -100 },
+  const titleVariants = {
+    hidden: { opacity: 0, x: -50 },
     visible: {
       opacity: 1, x: 0,
       transition: {
@@ -29,8 +36,7 @@ const Profile = () => {
       }
     }
   }
-
-  const rightVariants = {
+  const imgVariants = {
     hidden: { opacity: 0, x: 120 },
     visible: {
       opacity: 1, x: 0,
@@ -47,7 +53,7 @@ const Profile = () => {
           ref={ref}
           initial='hidden'
           animate={controls}
-          variants={leftVariants}
+          variants={titleVariants}
         >Profile
         </ProfileH2>
         <ProfileText>
@@ -59,7 +65,7 @@ const Profile = () => {
           ref={ref}
           initial='hidden'
           animate={controls}
-          variants={rightVariants}
+          variants={imgVariants}
         />
       </ImgWrapper>
     </ProfileContainer >

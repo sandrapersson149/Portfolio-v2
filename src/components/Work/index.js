@@ -1,5 +1,12 @@
 import React, { useEffect } from 'react';
-import { WorkContainer, TitleWrapper, WorkTitle, WorkInfo, ProjectsContainer, Wrapper, Arrow } from './WorkStyled';
+import {
+  WorkContainer,
+  TitleWrapper,
+  WorkTitle,
+  WorkInfo,
+  ProjectsContainer,
+  Wrapper
+} from './WorkStyled';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
@@ -19,31 +26,31 @@ const Work = () => {
   }, [controls, inView]);
 
   const firstVariants = {
-    hidden: { opacity: 0, x: -100 },
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1, x: 0,
+      opacity: 1,
       transition: {
-        duration: 0.8
+        duration: 1
       }
     }
   }
   const secondVariants = {
-    hidden: { opacity: 0, x: -100 },
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1, x: 0,
+      opacity: 1,
       transition: {
-        duration: 0.8,
-        delay: 0.3
+        duration: 1.2,
+        delay: 0.5
       }
     }
   }
   const thirdVariants = {
-    hidden: { opacity: 0, x: -100 },
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1, x: 0,
+      opacity: 1,
       transition: {
-        duration: 0.8,
-        delay: 0.6
+        duration: 1.2,
+        delay: 1
       }
     }
   }
@@ -54,7 +61,6 @@ const Work = () => {
         <WorkTitle>Work</WorkTitle>
         <h3>Some of my projects:</h3>
       </TitleWrapper>
-
       <ProjectsContainer>
 
         <motion.div
@@ -62,41 +68,40 @@ const Work = () => {
           initial='hidden'
           animate={controls}
           variants={firstVariants}
-          whileHover={{ scale: 1.2, color: '#54C6CD' }}>
-          <h2>Team project - SunStats</h2>
+          whileHover={{ color: '#54C6CD' }}>
+          <motion.a href="https://github.com/sandrapersson149/fe_20tp_bev_group6"
+            whileHover={{ textDecoration: 'underline' }}
+          >SunStats</motion.a>
           <Wrapper>
-            <p>A group project from school. We made a travel weather app.</p>
-            <motion.a href="https://github.com/sandrapersson149/fe_20tp_bev_group6"
-              whileHover={{ scale: 1.5, opacity: 0.5 }}>
-              <Arrow /></motion.a>
+            <p>Team project - A group project from school. We made a travel weather app.</p>
           </Wrapper>
         </motion.div>
+
         <motion.div
           ref={ref}
           initial='hidden'
           animate={controls}
           variants={secondVariants}
-          whileHover={{ scale: 1.2, color: '#54C6CD' }}>
-          <h2>React app - BurgerAndBeans</h2>
+          whileHover={{ color: '#54C6CD' }}>
+          <motion.a href="https://github.com/sandrapersson149/BurgerAndBeans"
+            whileHover={{ textDecoration: 'underline' }}
+          >BurgerAndBeans</motion.a>
           <Wrapper>
-            <p>A side project I made to learn more about React and animations.</p>
-            <motion.a href="https://github.com/sandrapersson149/BurgerAndBeans"
-              whileHover={{ scale: 1.5, opacity: 0.5 }}>
-              <Arrow /></motion.a>
+            <p>React app - A side project I made to learn more about React and animations.</p>
           </Wrapper>
         </motion.div>
+
         <motion.div
           ref={ref}
           initial='hidden'
           animate={controls}
           variants={thirdVariants}
-          whileHover={{ scale: 1.2, color: '#54C6CD' }}>
-          <h2>AwesomeCake - My first project</h2>
+          whileHover={{ color: '#54C6CD' }}>
+          <motion.a href="https://github.com/sandrapersson149/awesomecake-ip1"
+            whileHover={{ textDecoration: 'underline' }}
+          >AwesomeCake</motion.a>
           <Wrapper>
-            <p>This is my first HTML/CSS project from school.</p>
-            <motion.a href="https://github.com/sandrapersson149/awesomecake-ip1"
-              whileHover={{ scale: 1.5, opacity: 0.5 }}>
-              <Arrow /></motion.a>
+            <p>First school project - This was my first HTML/CSS project from school.</p>
           </Wrapper>
         </motion.div>
 
@@ -106,7 +111,6 @@ const Work = () => {
         <p>Find all my projects at my <a href="https://github.com/sandrapersson149?tab=repositories">Github</a></p>
       </WorkInfo>
     </WorkContainer>
-
   )
 }
 

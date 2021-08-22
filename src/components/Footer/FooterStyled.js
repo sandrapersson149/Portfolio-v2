@@ -6,7 +6,6 @@ height: 150px;
 margin: 0;
 background: #252839;
 `
-
 export const FooterInfo = styled.p`
 font-size: 20px;
 font-weight: 200;
@@ -14,4 +13,7 @@ padding: 60px;
 color: #fff;
 text-align: center;
 margin-top: 0;
+@media screen and (max-width: 400px) {
+  font-size: 15px;
+}
 `

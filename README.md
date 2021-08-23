@@ -1,4 +1,4 @@
-# Web portfolio v2!
+# ✨Web portfolio v2✨
 
 This is my new portfolio! I played around with animations and different styles that I am used to, it was fun to experiment. I'm so happy with the end result! 
 
